@@ -1,0 +1,450 @@
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease-in;
+  -moz-transition: opacity 0.25s ease-in;
+  -o-transition: opacity 0.25s ease-in;
+  -ms-transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in;
+  transition-delay: 0.25s;
+}
+.fade.in{
+  opacity: 1;
+}
+
+.animate-switch-container {
+  position:relative;
+  overflow: hidden;
+  height: 660px;
+  width: 100%;
+  padding:10px;
+}
+.animate-switch{
+  padding:10px;
+  width: 100%;
+}
+.animate-switch.ng-animate {
+  -webkit-transition:all 0.5s;
+  transition:all 0.5s;
+  position:absolute;
+
+}
+/* hide leaving slide  */
+/* show */
+.animate-switch.ng-leave{
+  left:0;
+}
+/* hide */
+.forward .animate-switch.ng-leave.ng-leave-active{
+  left:-100%;
+}
+.backward .animate-switch.ng-leave.ng-leave-active{
+  left: 100%;
+}
+/* show entering slide  */
+/* hide */
+.forward .animate-switch.ng-enter {
+  left:100%;
+}
+.backward .animate-switch.ng-enter {
+  left:-100%;
+}
+/* show */
+.animate-switch.ng-enter.ng-enter-active {
+  left:0;
+}
+
+// Helper
+
+// slide 1
+
+
+.main-container {
+
+  .row-style {
+    padding: 18px 0;
+    border-bottom: 1px solid $light-grey;
+    font-size: 14px;
+
+    .product, .middle-elements {
+      display: inline-block;
+      margin-top: 0;
+    }
+
+    .quantity {
+      margin-top: -9px;
+
+      .quantity-container {
+        background-color: $light-grey;
+        border-radius: 23px;
+        width: 70px;
+        margin: 0 auto;
+        padding: 10px 0;
+        color: #000;
+        text-align: center;
+        font-family: $catamaran;
+
+        span {
+          padding: 0 10px;
+          font-weight: 800;
+        }
+
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .cost-amount {
+      font-weight: 600;
+    }
+
+    .remove {
+      i {
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+
+    .product-image {
+      text-align: center;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    .price-amount {
+      color: #ff402b;
+      font-weight: 600;
+
+      span {
+        color: $dark-grey;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .buttons-section {
+    padding: 20px 0;
+
+    .hollow {
+      width: 250px;
+      border-radius: 23px;
+      font-weight: 600;
+      border-width: 3px;
+      font-family: 'Catamaran', sans-serif;
+      font-size: 16px;
+      padding: 10px 0;
+    }
+
+    .promo {
+      .promo-info {
+      input[type=text] {
+        background-color: $light-grey;
+        background-image: url('../assets/images/Pormo-Code.png');
+        background-repeat: no-repeat;
+        background-position: 15px 12px;
+        border-radius: 23px;
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px 0;
+        color: $dark-grey;
+        font-family: $catamaran;
+        padding: 10px 10px 10px 40px;
+        border: none;
+        box-shadow: none;
+      }
+
+      input[text]:after {
+        content: '&#8594';
+        font-family: FontAwesome;
+        color: #000;
+      }
+
+        img {
+          margin: -4px 15px 0;
+          width: 8%;
+        }
+
+        i {
+          position: absolute;
+          right: 43%;
+          bottom: 9.2%;
+          font-size: 16px;
+          color: #000;
+        }
+      }
+    }
+
+    .total {
+      .total-holder {
+        display: inline-block;
+        padding-right: 10px;
+        color: $dark-grey;
+        font-family: $catamaran;
+        vertical-align: text-bottom;
+      }
+
+      span {
+        font-style: normal;
+        font-weight: 800;
+        font-family: $roboto;
+        font-size: 30px;
+      }
+    }
+  }
+
+  // Slide 2
+  .rightalign {
+    text-align: right;
+  }
+
+  .delivery-selection {
+    .free-delivery,
+    .express-delivery {
+      button {
+        border-radius: $borderradius;
+        background: #ffffff;
+        border: 3px solid $light-grey;
+        color: $black;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // Slide 3
+  .payment-icons {
+    .paypal {
+      border: 2px solid $light-grey;
+      border-radius: 50%;
+      padding: 10px 15px;
+    }
+  }
+
+  .more-card-details {
+    .end-date {
+      .selection {
+        .marginright20 {
+          margin-right: 20px;
+        }
+
+        .inline {
+          select {
+            font-family: $catamaran;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
+    .marginleft0 {
+      padding-left: 0;
+    }
+
+    .cvv {
+      .cvv-container {
+        input[type=number] {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  // slide 4
+  .left-column {
+    font-family: $roboto;
+    font-weight: 600;
+
+    .details {
+      .c-number {
+        float: left;
+      }
+    }
+  }
+
+  .right-column {
+    .product {
+      padding: 20px 0;
+
+      .productName {
+        h6 {
+          font-family: $catamaran;
+          font-weight: 600;
+        }
+      }
+
+      .productDescription {
+        font-size: 12px;
+        color: $dark-grey;
+        font-family: $driod;
+        font-style: italic;
+
+        i {
+          font-size: 5px;
+          vertical-align: middle;
+        }
+      }
+
+      .productPrice {
+        font-weight: 600;
+        font-family: $roboto;
+      }
+    }
+
+    .grandTotal {
+      text-align: right;
+      color: $dark-grey;
+      font-style: italic;
+      font-family: $driod;
+
+      span {
+        padding-left: 20px;
+        font-size: 20px;
+        color: $black;
+        font-style: normal;
+        font-weight: 600;
+        font-family: $roboto;
+      }
+    }
+  }
+
+  .button-selection {
+    .grand-total {
+      text-align: right;
+      color: $dark-grey;
+      font-style: italic;
+      font-family: $driod;
+
+      span {
+        padding-left: 20px;
+        font-size: 23px;
+        color: $black;
+        font-style: normal;
+        font-weight: 600;
+        font-family: $roboto;
+      }
+    }
+  }
+
+    // slide 5
+    .check {
+      img {
+        width: 16%;
+      }
+    }
+
+    .congratulations {
+      font-size: 45px;
+      font-family: $roboto;
+    }
+
+    .text {
+      font-size: 23px;
+      color: $dark-grey;
+      font-family: $roboto;
+    }
+
+}
+
+.target {
+  border: 3px solid $black;
+}
+
+.main-container .delivery-selection .express-delivery button:active,
+ .main-container .delivery-selection .express-delivery button:focus,
+ .main-container .delivery-selection .free-delivery button:active,
+  .main-container .delivery-selection .free-delivery button:focus,
+  .main-container .delivery-selection .focus button{
+  border: 3px solid $black;
+}
+
+.main-container .delivery-selection .express-delivery button:after {
+  content:"";
+    border:5px solid $black;
+    border-color:$black  transparent transparent transparent;
+    position:absolute;
+    top:215px;
+    left:58.7%;
+    margin-left:-10px;
+}
+
+.visa.circle {
+  border-color: $black;
+}
+
+.price-amount span:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: $dark-grey;
+  top: 39.1%;
+  left: 65.5%;
+}
+
+.visa.circle:after {
+  content:"";
+  border:5px solid $black;
+  border-color:$black  transparent transparent transparent;
+  position:absolute;
+  top:219px;
+  left:46.2%;
+  margin-left:-10px;
+}
+
+// Progress bar
+.progressbar {
+  padding-bottom: 50px;
+
+  li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    position: relative;
+
+    .first.active,
+    .second.active,
+    .third.active,
+    .fourth.active,
+    .second.active:after,
+    .third.active:after,
+    .fourth.active:after{
+      background-color: $buttonblue;
+    }
+
+    .first, .second,
+    .third, .fourth {
+      border-radius: 50%;
+      line-height: 28px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .first,.second, .third,
+    .fourth {
+      background-color: $light-grey;
+    }
+
+
+    .second:after,
+    .third:after,
+    .fourth:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      background-color: $light-grey;
+      top: 10px;
+      left: -80%;
+      z-index: -1;
+    }
+  }
+}
+
+.width72 {
+  margin-left: 72px;
+}
+
+.ng-valid {
+  border:none;
+}

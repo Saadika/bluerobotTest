@@ -1,0 +1,190 @@
+/**
+ *  If you want to override some foundation settings, you have to change values here.
+ *  The list of settings values are listed here bower_components/foundation/scss/foundation/_settings.scss
+ */
+$topbar-background: #5AADBB;
+
+/**
+ *  The import of foundation is made manually because there is still no links of the
+ *  sass version in their bower.json...
+ */
+@import '../../bower_components/foundation-sites/scss/foundation';
+@include foundation-everything;
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif');
+
+$light-grey: #f6f6f6;
+$dark-grey: #a1a1a1;
+$catamaran: 'Catamaran', sans-serif;
+$roboto: 'Roboto';
+$driod: 'Droid Serif', serif;
+$buttonblue: #1f4aa6;
+$borderradius: 23px;
+$black: #000000;
+
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
+//
+.paddingtop30 {
+  padding-top: 30px;
+}
+
+.paddingtop60 {
+  padding-top: 60px;
+}
+
+.next {
+  text-align: right;
+
+  button {
+    width: 140px;
+    border-radius: $borderradius;
+    background: $buttonblue;
+    font-weight: 600;
+
+    i {
+      float: right;
+    }
+  }
+}
+
+input[type=text], select,
+input[type=number], input[type=email],
+textarea, input[type=text]:focus, select:focus,
+input[type=number]:focus, input[type=email]:focus,
+textarea:focus {
+  border: none;
+  background-color: $light-grey;
+  color: $dark-grey;
+  border-radius: $borderradius;
+  box-shadow: none;
+  resize: none;
+  padding: 8px 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAPFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQLyYwAAAAE3RSTlMABAYPExQmTHR/gIKDys7o6+/xjg4DFQAAAE1JREFUKFPly8kNgDAQQ1GzhLAHcP+9wsgnRpkK8k+Wngw031DOXitzdnaQwkxy+lt6hEa7+yHdhkabJ+FVJ2FAwPjhWifDJSKgi6m1XlYDA19jMc9SAAAAAElFTkSuQmCC');
+  background-size: 19px 18px;
+}
+
+.paddingtop3 {
+  padding-top: 3px;
+}
+
+.width75 {
+  width: 75px;
+}
+
+input.active{
+  border: 3px solid red;
+}
+
+input.ng-valid {
+  border:none;
+}
+
+.back {
+  .button.primary {
+    width: 120px;
+    background-color: #ffffff;
+    border: 3px solid $buttonblue;
+    color: $buttonblue;
+    border-radius: $borderradius;
+    font-weight: 600;
+
+    i {
+      float:left;
+    }
+  }
+}
+
+h3 {
+  font-size: 20px;
+  padding-bottom: 30px;
+  font-family: $catamaran;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-family: $roboto;
+  padding:0 0 15px 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.dark-grey {
+  color: $dark-grey;
+}
+
+.description {
+  font-style: italic;
+  font-family: $roboto;
+}
+
+.float-none {
+  float: none;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.middle-elements {
+  top: 50%;
+  margin-top: 62px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.circle {
+  border: 2px solid $light-grey;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.borderbottom {
+  border-bottom: 1px solid $light-grey;
+}
+
+.marginTop80 {
+  margin-top: 80px;
+}

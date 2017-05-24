@@ -1,0 +1,163 @@
+.testtwo-container {
+  .header {
+    width: 100%;
+    border-bottom: 2px solid #000;
+
+    .left-side {
+      .menuIcon {
+        text-align: right;
+        padding: 11px 20px 11px 70px;
+
+        i {
+          font-size: 20px;
+          vertical-align: text-top;
+        }
+      }
+
+      .headerTitle {
+        padding: 10px 0;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+
+    .right-side {
+      .companyName {
+        padding-right: 0;
+
+        .logo {
+          text-align: center;
+          background: green;
+          float: right;
+          font-size: 30px;
+        }
+      }
+
+      .live {
+        background: red;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .header.row {
+    margin: 0;
+  }
+
+  .mainContent {
+    background-color: #f1f1f1;
+    padding: 30px 0;
+    .sortingOptions {
+      background-color: #fff;
+      padding: 10px;
+      .left-side {
+        .incoming {
+          i {
+            color: #cccccc;
+          }
+        }
+      }
+
+      .right-side {
+        .views {
+          float: right;
+
+          i {
+            color: #cccccc;
+          }
+        }
+      }
+    }
+
+    .listings {
+      .left-side, .right-side {
+        .box {
+          .left-side {
+            .profileImage {
+              padding-top: 4px;
+              i {
+                font-size: 40px;
+                border: 1px solid #000;
+                border-radius: 50%;
+                padding: 14px 20px;
+              }
+
+              img {
+                margin-top: -49px;
+                margin-left: 37px;
+              }
+            }
+          }
+
+          .right-side {
+            .username {
+              padding-bottom: 10px;
+              span {
+                color: #000;
+                font-weight: 600;
+              }
+            }
+
+            .post {
+              padding-bottom: 10px;
+            }
+
+            .timePosted {
+              font-size: 13px;
+              padding-bottom: 10px;
+              border-bottom: 1px solid #ccc;
+              margin-bottom: 10px;
+            }
+
+            .bottom {
+              font-size: 13px;
+              padding-bottom: 10px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.profileImage {
+  padding-top: 4px;
+  i {
+    font-size: 28px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 6px 10px;
+  }
+}
+
+.box {
+  background: #fff;
+  padding-top: 20px;
+}
+
+.marginTop20 {
+  margin-top: 20px;
+}
+
+.paddingLeft0 {
+  padding-left: 0;
+}
+
+.paddingRight0 {
+  padding-right: 0;
+}
+
+.grey {
+  color: #ccc;
+}
+
+.selected {
+  border-bottom: 5px solid #ccc;
+  border-left: 5px solid #ccc;
+  border-right: 5px solid #ccc;
+}
