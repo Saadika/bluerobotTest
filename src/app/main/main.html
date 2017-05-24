@@ -1,0 +1,480 @@
+<div class="main-container">
+
+  <div class="row">
+    <div class="small-12 columns">
+      <form name="multiStepForm" class="form-validation" role="form" action="index.html" method="post" novalidate>
+        <div class="animate-switch-container" ng-switch on="stage" ng-class="{forward: direction, backward:!direction}">
+          <div class="animate-switch" ng-switch on="stage">
+            <div class="row center float-none">
+              <div class="progressbar float-none center small-7 columns">
+                <ul class="width72">
+                  <li><div class="first" ng-class="{'active': isActive}"><img ng-src="{{image1}}" alt="bag"></div></li>
+                  <li><div class="second" ng-class="{'active': isActive1 }"><img ng-src="{{image2}}" alt="pin"></div></li>
+                  <li><div class="third" ng-class="{'active': isActive2 }"><img ng-src="{{image3}}" alt="credit card"></div></li>
+                  <li><div class="fourth" ng-class="{'active': isActive3 }"><img ng-src="{{image4}}" alt="checkmark"></div></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row center float-none">
+              <div class="progressbar float-none center small-6 columns">
+                <ul>
+                  <li class="left-align">Cart</li>
+                  <li class="left-align">Delivery</li>
+                  <li class="left-align">Payment</li>
+                  <li class="left-align">Confirmation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 1 -->
+
+          <div class="animate-switch" ng-switch-when="stage1">
+            <div class="small-12 columns">
+              <section class="row small-12 columns row-style dark-grey">
+                <div class="product small-5 columns">
+                  Product
+                </div>
+
+                <div class="middle-elements small-2 large-7 columns">
+                  <div class="color small-2 columns">
+                    Color
+                  </div>
+
+                  <div class="size small-2 columns">
+                    Size
+                  </div>
+
+                  <div class="price small-2 columns">
+                    Price
+                  </div>
+
+                  <div class="amount small-2 columns">
+                    Amount
+                  </div>
+
+                  <div class="cost small-4 columns">
+                    Cost
+                  </div>
+                </div>
+              </section>
+
+              <section class="row row-style small-12 columns">
+                <div class="product-image small-2 large-2 columns">
+                  <img src="assets/images/NuBalanceBag.png" alt="New Balance Men's Street Bag">
+                </div>
+
+                <div class="product-description small-4 large-3 columns">
+                  <h3>New Balance Men's Street </br>Bag</h3>
+                  <h4 class="description dark-grey">Bags</h4>
+                </div>
+
+                <div class="middle-elements small-2 large-7 columns">
+                  <div class="color description small-1 large-2 columns dark-grey">
+                    black
+                  </div>
+
+                  <div class="size description small-1 large-2 columns dark-grey">
+                    S
+                  </div>
+
+                  <div class="price-amount small-1 large-2 columns">
+                    $485 &nbsp;<span>$660<span>
+                  </div>
+
+                  <div class="quantity small-1 large-2 columns">
+                    <div class="quantity-container">
+                      <i class="fa fa-minus" aria-hidden="true" ng-click="quantity = quantity - 1" ng-init="quantity=2"></i> <span>{{quantity}}</span> <i class="fa fa-plus" aria-hidden="true" ng-click="quantity = quantity + 1" ng-init="quantity=2"></i>
+                    </div>
+                  </div>
+
+                  <div class="cost-amount small-1 large-2 columns">
+                    $970
+                  </div>
+
+                  <div class="remove center small-1 large-2 columns dark-grey">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </section>
+
+              <section class="row row-style small-12 columns">
+                <div class="product-image small-2 columns">
+                  <img src="assets/images/CamoJacket.png" alt="NuBalance Bag">
+                </div>
+
+                <div class="productdescription small-3 columns">
+                  <h3>Lyle &amp; Scott Men's Short </br>Sleeve Camo Pocket</h3>
+                  <h4 class="description dark-grey">Scarves</h4>
+                </div>
+
+                <div class="middle-elements small-2 large-7 columns">
+                  <div class="color description small-1 large-2 columns dark-grey">
+                    White
+                  </div>
+
+                  <div class="size description small-1 large-2 columns dark-grey">
+                    XXL
+                  </div>
+
+                  <div class="price-amount small-1 large-2 columns">
+                    $760
+                  </div>
+
+                  <div class="quantity small-1 large-2 columns">
+                    <div class="quantity-container">
+                      <i class="fa fa-minus" aria-hidden="true" ng-click="count = count - 1" ng-init="count=1"></i> <span>{{count}}</span> <i class="fa fa-plus" aria-hidden="true" ng-click="count = count + 1" ng-init="count=1"></i>
+                    </div>
+                  </div>
+
+                  <div class="cost-amount small-1 large-2 columns">
+                    $970
+                  </div>
+
+                  <div class="remove center small-1 large-2 columns dark-grey">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </section>
+
+              <section class="row buttons-section small-12 columns">
+                <div class="shopping small-3 columns">
+                  <button class="hollow button" href="#">Continue shopping</button>
+                </div>
+
+                <div class="promo small-5 columns">
+                  <div class="promo-info description">
+                    <input type="text" name="promo" value="" placeholder="Promo Code">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+
+                <div class="total description small-2 columns">
+                  <div class="total-holder">Total: </div><span>$1 046<span>
+                </div>
+
+                <div class="next small-2 columns">
+                  <button type="button" class="button primary" ng-click="next('stage2')">Next Step <i class="fa fa-arrow-right"></i></button>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+
+          <div class="animate-switch" ng-switch-when="stage2">
+            <div class="row center small-12 columns">
+              <div class="center float-none small-8 columns">
+                <div class="left-align">
+                  <section class="row delivery-selection">
+                    <div class="free-delivery rightalign small-6 columns">
+                      <button type="button" class="button primary">Free Delivery</button>
+                    </div>
+
+                    <div class="express-delivery focus small-6 columns">
+                      <button type="button" class="button primary" ng-class="{'focus' = true}">Express Delivery <span>$35</span></button>
+                    </div>
+                  </section>
+
+                  <section class="row customer-name paddingtop3">
+                    <div class="firstname small-6 columns " ng-class="{ 'alert-box': (multiStepForm.firstname.$touched && multiStepForm.firstname.$invalid) || submitted, 'active': submitted }">
+                      <label for="firstname">First Name</label>
+                      <input type="text" name="firstname" value="" ng-model="user" placeholder="Komol"  ng-model="firstName" required="" ng-class="{'active': (multiStepForm.firstname.$touched && multiStepForm.firstname.$invalid) || submitted}"/>
+                    </div>
+
+                    <div class="lastname small-6 columns" ng-class="{ 'alert-box': (multiStepForm.lastname.$touched && multiStepForm.lastname.$invalid) || submitted, 'active': submitted }">
+                      <label for="lastname">Last Name</label>
+                      <input type="text" name="lastname" value="" placeholder="Kuchkarov"  ng-model="lastname" required="" ng-class="{'active': (multiStepForm.lastname.$touched && multiStepForm.lastname.$invalid) || submitted}">
+                    </div>
+                  </section>
+
+                  <section class="row contact-details">
+                    <div class="contact-number small-6 columns" ng-class="{ 'alert-box': (multiStepForm.phoneNumber.$touched && multiStepForm.phoneNumber.$invalid) || submitted, 'active': submitted }">
+                      <label for="phoneNumber">Phone Number</label>
+                      <input type="number" name="phoneNumber" value="" placeholder="1-800-243-0000" ng-model="phoneNumber" required="" ng-class="{'active': (multiStepForm.phoneNumber.$touched && multiStepForm.phoneNumber.$invalid) || submitted}">
+                      <div class="help-block" ng-messages="multiStepForm.phoneNumber.$error" ng-if="(multiStepForm.phoneNumber.$touched && multiStepForm.phoneNumber.$invalid)  || submitted" >
+                          <p ng-message="required">Your phone number is required.</p>
+                      </div>
+                    </div>
+
+                    <div class="email small-6 columns" ng-class="{ 'alert-box': (multiStepForm.email.$touched && multiStepForm.email.$invalid) || submitted, 'active': submitted }">
+                      <label for="email">Email</label>
+                      <input type="email" name="email" value="" placeholder="komolkuchkarov@gmail.com" ng-model="email" required="" ng-class="{'active': (multiStepForm.email.$touched && multiStepForm.email.$invalid) || submitted}">
+                      <div class="help-block" ng-messages="multiStepForm.email.$error" ng-if="(multiStepForm.email.$touched && multiStepForm.email.$invalid)  || submitted" >
+                          <p ng-message="required">Your email address is required.</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="row area-details">
+                    <div class="country small-6 columns">
+                      <label for="country">Country</label>
+                      <select class="input-lg">
+                        <option value="Uzbekistan">Uzbekistan</option>
+                        <i class="fa fa-chevron-down"></i>
+                      </select>
+                    </div>
+
+                    <div class="city small-6 columns">
+                      <label for="city">City</label>
+                      <select>
+                        <option value="Tashkent">Tashkent</option>
+                      </select>
+                    </div>
+                  </section>
+
+                  <section class="row residential-details">
+                    <div class="address small-6 columns">
+                      <label for="address">Address</label>
+                      <textarea name="address" rows="3" cols="80"></textarea>
+                    </div>
+
+                    <div class="zipcode small-6 columns">
+                      <label for="zipcode">Zipcode</label>
+                      <input type="number" name="zipcode" value="" placeholder="">
+                    </div>
+                  </section>
+
+                  <section class="row button-selection small-12 columns">
+                    <div class="back small-6 columns">
+                      <button type="button" class="button primary" ng-click="back('stage1')"><i class="fa fa-arrow-left"></i>Back</button>
+                    </div>
+
+                    <div class="next small-6 columns">
+                      <button type="button" class="button primary" ng-click="next('stage3')">Next Step <i class="fa fa-arrow-right"></i></button>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+
+          <div class="animate-switch" ng-switch-when="stage3">
+            <div class="row small-12 columns">
+              <div class="center float-none small-8 columns">
+                <div class="left-align">
+                  <section class="row payment-icons center">
+                    <div class="visa inline circle">
+                      <img src="assets/images/Visa_color.png" alt="visa">
+                    </div>
+
+                    <div class="mastercard inline circle">
+                      <img src="assets/images/Mastercard_color.png" alt="mastercard">
+                    </div>
+
+                    <div class="paypal inline">
+                      <img src="assets/images/PayPal_color.png" alt="paypal">
+                    </div>
+                  </section>
+
+                  <section class="row card-details paddingtop30">
+                    <div class="cardholder-name small-6 columns">
+                      <label class="small-12 columns" for="cardholder-name">Cardholder Name</label>
+                      <input type="text" name="cardholder-name" value="" placeholder="">
+                    </div>
+
+                    <div class="account-number small-6 columns">
+                      <label class="small-12 columns" for="account-number">Card Number</label>
+                      <input type="number" name="account-number" value="" placeholder="">
+                    </div>
+                  </section>
+
+                  <section class="row more-card-details small-12 columns">
+                    <div class="end-date marginleft0 small-6 columns">
+                      <label class="small-12 columns" for="">End Date</label>
+                      <div class="selection row small-7 columns">
+                        <div class="inline marginright20">
+                          <select class="width75">
+                            <option value="" disabled selected>mm</option>
+                            <option value="one">01</option>
+                          </select>
+                        </div>
+
+                        <div class="inline">
+                          <select>
+                            <option value="" disabled selected>yyyy</option>
+                            <option value="one">2020</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="cvv small-6 columns">
+                      <div class="cvv-container">
+                        <label for="cvv">CVV</label>
+                        <input type="number" name="cvv" value="" placeholder="">
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="row button-selection paddingtop30 small-12 columns">
+                    <div class="back small-6 columns">
+                      <button type="button" class="button primary" ng-click="back('stage2')"><i class="fa fa-arrow-left"></i>Back</button>
+                    </div>
+
+                    <div class="next small-6 columns">
+                      <button type="button" class="button primary" ng-click="next('stage4')">Next Step <i class="fa fa-arrow-right"></i></button>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+
+          <div class="animate-switch" ng-switch-when="stage4">
+            <div class="row small-12 columns">
+              <div class="center float-none small-8 columns">
+                <div class="left-align">
+                  <section class="left-column small-6 columns">
+                    <div class="heading dark-grey small-12 columns">
+                      <h5>delivery</h5>
+                    </div>
+
+                    <div class="express paddingtop30 row small-12 columns">
+                      <div class="icon small-2 columns">
+                        <img src="assets/images/upload.png" alt="upload icon">
+                      </div>
+
+                      <div class="second-delivery small-10 columns">
+                        Express Deliver - <span>$35</span>
+                      </div>
+                    </div>
+
+                    <div class="location paddingtop30 row small-12 columns">
+                      <div class="map-icon small-2 columns">
+                        <img src="assets/images/map.png" alt="map icon">
+                      </div>
+
+                      <div class="location-address small-10 columns">
+                        Komol Kuchkarov<br>
+                        Chilanzar 26, d. 25, kv. 1, Tashkent,<br>
+                        100 131
+                      </div>
+                    </div>
+
+                    <div class="payment paddingtop60">
+                      <div class="heading dark-grey small-12 columns">
+                        <h5>Payment</h5>
+                      </div>
+
+                      <div class="details row small-12 columns">
+                        <div class="payment-icon small-2 columns">
+                          <img src="assets/images/credit_card_grey.png" alt="credit card icon">
+                        </div>
+
+                        <div class="c-type small-1 columns">
+                          visa
+                        </div>
+
+                        <div class="c-number small-9 columns">
+                          xxxx xxxx xxxx 3734
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="right-column small-6 columns">
+                    <div class="heading borderbottom dark-grey row  small-12 columns">
+                      <h5>cart</h5>
+                    </div>
+
+                    <div class="product borderbottom row small-12 columns">
+                      <div class="image small-3 columns">
+                        <img src="assets/images/NuBalanceBag.png" alt="New Balance Men's Street Bag">
+                      </div>
+
+                      <div class="productDetails small-7 columns">
+                        <div class="productName">
+                          <h6>New Balance Men's Street Backpack</h6>
+                        </div>
+
+                        <div class="productDescription">
+                          S <i class="fa fa-circle" aria-hidden="true"></i> Black <i class="fa fa-circle" aria-hidden="true"></i> 2pcs
+                        </div>
+                      </div>
+
+                      <div class="productPrice small-2 columns">
+                        $970
+                      </div>
+                    </div>
+
+                    <div class="product borderbottom row small-12 columns">
+                      <div class="image small-3 columns">
+                        <img src="assets/images/CamoJacket.png" alt="Lyle &amp; Scott Men's Short Sleeve Camo Pocket">
+                      </div>
+
+                      <div class="productDetails  small-7 columns">
+                        <div class="productName">
+                          <h6>Lyle &amp; Scott Men's Short<br> Sleeve Camo Pocket</h6>
+                        </div>
+
+                        <div class="productDescription">
+                          XXL <i class="fa fa-circle" aria-hidden="true"></i> White <i class="fa fa-circle" aria-hidden="true"></i> 1pcs
+                        </div>
+                      </div>
+
+                      <div class="productPrice small-2 columns">
+                        $970
+                      </div>
+                    </div>
+
+                    <div class="grandTotal row paddingtop30 small-12 columns">
+                      Total <span>$1 046</span>
+                    </div>
+                  </section>
+
+                  <div class="row"></div>
+
+                  <section class="row button-selection marginTop80 small-12 columns">
+                    <div class="back small-3 columns">
+                      <button type="button" class="button primary" ng-click="back('stage3')"><i class="fa fa-arrow-left"></i>Back</button>
+                    </div>
+
+                    <div class="grand-total small-5 columns">
+                      Total Price <span>$1 046</span>
+                    </div>
+
+                    <div class="next small-4 columns">
+                      <button type="button" class="button primary" ng-click="submitForm('success')">Confirm Order</button>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+
+          <div class="animate-switch" ng-switch-when="success">
+            <div class="row small-12 columns center">
+              <div class="center float-none small-7 columns">
+                <div class="check row">
+                  <img src="assets/images/check.png" alt="check image">
+                </div>
+
+                <div class="congratulations row paddingtop30">
+                  Congratulations. Your order is accepted.
+                </div>
+
+                <div class="text row paddingtop30">
+                  Let me be clear. Not even close. We did not go by choice, we went because of necessity.
+                </div>
+
+                <div class="track-order row paddingtop60">
+                  <div class="track-order-here next center small-12 columns">
+                    <button type="button" class="button primary">Track Order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
